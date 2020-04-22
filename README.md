@@ -47,6 +47,7 @@ In order to use the template you must have installed the following components:
 - [Pandoc](http://pandoc.org/installing.html)
 - [LaTeX](https://latex-project.org/ftp.html)
 
+Alternatively you can use one of the official pandoc [Docker images](https://hub.docker.com/r/pandoc/latex).
 
 ## Usage
 
@@ -63,6 +64,9 @@ following line:
 
 `pandoc letter.md -s -o letter.pdf --template="letter"`
 
+or using the corresponding Docker command:
+
+`docker run --rm --volume "`pwd`:/data" pandoc/latex letter.md -s -o letter.pdf --template="letter"`
 
 ## Configuration
 
